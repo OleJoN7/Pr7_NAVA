@@ -1,0 +1,939 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font: 12px Tahoma, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+div, menu, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, legend, label, select, input, textarea, button {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FONTS----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: "OpenRegular";
+    src: url('../fonts/opensans/regular/opensans-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OpenBold";
+    src: url('../fonts/opensans/bold/opensans-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "RalewayRegular";
+    src: url('../fonts/raleway/regular/raleway-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "RalewayBold";
+    src: url('../fonts/raleway/bold/raleway-bold.ttf') format('truetype');
+}
+
+body {
+    font: 16px "OpenRegular", sans-serif;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrapper {
+    min-height: calc(100% - 15%);
+}
+
+.container {
+    width: 1490px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------Main HEADER + Welcome Section--------------*/
+/*----------------------------------------------------------------------------------*/
+.reserve-section {
+    background: url("../images/reserve-bg.jpg") 50% 50% no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.reserve-section .main-header {
+    padding-top: 35px;
+    overflow: hidden;
+}
+
+.logo {
+    width: 180px;
+    height: 40px;
+    float: left;
+    overflow: hidden;
+}
+
+.main-header h1 {
+    text-indent: -9999px;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.main-nav li {
+    float: left;
+    margin-left: 10px;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #f3f5fd;
+    font: 16px "RalewayBold", sans-serif;
+    line-height: 40px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+    background: #fff;
+}
+
+.navbar-toggle {
+    margin: 0;
+    border: 1px solid #e7434e;
+}
+
+/*-------------H0ver-Reveal----------*/
+.hvr-reveal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-reveal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border-color: #e7434e;
+    border-style: solid;
+    border-width: 0;
+    -webkit-transition-property: border-width;
+    transition-property: border-width;
+    -webkit-transition-duration: 0.15s;
+    transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-reveal:hover:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    border-width: 4px;
+}
+
+/*--------------------------------*/
+
+.reserve-slogan {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /*transform: translateX(-50%)*/
+}
+
+.reserve-slogan h2 {
+    font: 72px "RalewayBold", sans-serif;
+    color: #f9fafe;
+    padding-bottom: 30px;
+}
+
+.reserve-slogan p {
+    font: 30px "OpenRegular", sans-serif;
+    color: #f9fafe;
+    text-transform: uppercase;
+    padding-bottom: 85px;
+}
+
+.destination-form {
+    width: 770px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.destination-form input[type="text"] {
+    font: 14px "RalewayRegular", sans-serif;
+    min-width: 570px;
+    line-height: 60px;
+    padding-left: 30px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: gray;
+    float: left;
+}
+
+/*-------Pulse Boat Icon--------------*/
+@-webkit-keyframes hvr-icon-pulse {
+    25% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+@keyframes hvr-icon-pulse {
+    25% {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+    75% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+}
+
+.hvr-icon-pulse {
+    font: 14px "RalewayBold", sans-serif;
+    line-height: 60px;
+    min-width: 200px;
+    background: #e7434e;
+    opacity: .85;
+    transition: .25s linear;
+    padding-left: 30px;
+    color: #f7cdcf;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    float: right;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 2.2em;
+}
+
+.hvr-icon-pulse:hover {
+    opacity: 1;
+}
+
+.hvr-icon-pulse:before {
+    content: '';
+    position: absolute;
+    background: url('../images/boat.png') 50% no-repeat;
+    width: 16px;
+    height: 16px;
+    right: 11em;
+    top: 1.5em;
+    padding: 0 1px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-icon-pulse:hover:before, .hvr-icon-pulse:focus:before, .hvr-icon-pulse:active:before {
+    -webkit-animation-name: hvr-icon-pulse;
+    animation-name: hvr-icon-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/*-------Pulse Boat Icon END-------------*/
+
+.statistic-list {
+    position: absolute;
+    top: 92.5%;
+    left: 10%;
+    width: 80%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #f1f1f1;
+}
+
+.statistic-list li {
+    text-align: center;
+    display: inline-block;
+    margin: 15px 0;
+    width: 24%;
+    border-left: 1px solid #d4d4d4;
+}
+
+.statistic-list li:first-child {
+    border: none;
+}
+
+.statistic-list p:nth-child(odd) {
+    font: 30px "OpenBold", sans-serif;
+    padding-bottom: 20px;
+}
+
+.statistic-list p:nth-child(even) {
+    font: 18px "OpenRegular", sans-serif;
+    padding-bottom: 30px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------TOP DESTINATION SECTION-----------------------*/
+
+.top-destinations .destination-header {
+    padding: 180px 0 85px;
+}
+
+.top-destinations .destination-header h3 {
+    font: 30px "RalewayRegular", sans-serif;
+    color: #343435;
+    padding-bottom: 30px;
+}
+
+.top-destinations .destination-header p {
+    color: #a8a8a8;
+}
+
+.top-destinations .countries-list li {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 30px;
+}
+
+.top-destinations .countries-list img {
+    height: 320px;
+    display: block;
+    border-radius: 5px;
+}
+
+/*------------Shadow Radial------------------*/
+
+.hvr-shadow-radial {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+}
+
+.hvr-shadow-radial:before, .hvr-shadow-radial:after {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    height: 15px;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+
+.hvr-shadow-radial:before {
+    bottom: 100%;
+    background: -webkit-radial-gradient(50% 150%, ellipse, rgba(0, 0, 0, 0.6) 0%, transparent 80%);
+    background: radial-gradient(ellipse at 50% 150%, rgba(0, 0, 0, 0.6) 0%, transparent 80%);
+}
+
+.hvr-shadow-radial:after {
+    top: 100%;
+    background: -webkit-radial-gradient(50% -50%, ellipse, rgba(0, 0, 0, 0.6) 0%, transparent 80%);
+    background: radial-gradient(ellipse at 50% -50%, rgba(0, 0, 0, 0.6) 0%, transparent 80%);
+}
+
+.hvr-shadow-radial:hover:before, .hvr-shadow-radial:focus:before, .hvr-shadow-radial:active:before, .hvr-shadow-radial:hover:after, .hvr-shadow-radial:focus:after, .hvr-shadow-radial:active:after {
+    opacity: 1;
+}
+
+/*------------Shadow Radial END------------------*/
+
+.top-destinations .countries-list .portugal {
+    /*width: 774px;*/
+}
+
+.countries-list .quantity {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    line-height: 40px;
+    padding: 0 10px 0 40px;
+    border-radius: 5px;
+    background: #e7434e;
+    opacity: .9;
+    transition: .25s linear;
+}
+
+.countries-list .quantity:hover {
+    opacity: 1;
+}
+
+/*-------------Boat Wooble------------------*/
+
+@-webkit-keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes hvr-icon-wobble-horizontal {
+    16.65% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    33.3% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    49.95% {
+        -webkit-transform: translateX(4px);
+        transform: translateX(4px);
+    }
+    66.6% {
+        -webkit-transform: translateX(-2px);
+        transform: translateX(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateX(1px);
+        transform: translateX(1px);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.hvr-icon-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 2.2em;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-icon-wobble-horizontal:before {
+    content: '';
+    background: url('../images/boat.png') 50% no-repeat;
+    width: 16px;
+    height: 16px;
+    right: 2.8em;
+    top: .6em;
+    position: absolute;
+    padding: 0 1px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.hvr-icon-wobble-horizontal:hover:before, .hvr-icon-wobble-horizontal:focus:before, .hvr-icon-wobble-horizontal:active:before {
+    -webkit-animation-name: hvr-icon-wobble-horizontal;
+    animation-name: hvr-icon-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*----------Boat Wooble END----------------------------------*/
+
+.countries-list .trip {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    text-align: left;
+}
+
+.top-destinations .countries-list p:nth-child(odd) {
+    font: 30px "RalewayRegular", sans-serif;
+    color: #e4e8e8;
+}
+
+.top-destinations .countries-list p:nth-child(even) {
+    font: 20px "RalewayRegular", sans-serif;
+    color: #e4e8e8;
+}
+
+.top-destinations .countries-list {
+    padding-bottom: 100px;
+}
+
+.top-destinations .explore-more-btn {
+    display: inline-block;
+    font: 14px "RalewayBold", sans-serif;
+    color: #6e6e6e;
+    text-decoration: none;
+    border: 1px solid #bdbdbd;
+    line-height: 60px;
+    padding: 0 40px;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    transition: .3s linear;
+}
+
+.top-destinations .explore-more-btn:hover {
+    background: #e7434e;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+/*----------------------Own BOAT SECTION-----------------------------*/
+/*------------------------------------------------------------------*/
+
+.own-boat {
+    background: url("../images/own-boat.jpg") 50% 50% no-repeat;
+    background-size: cover;
+}
+
+.own-boat .own-boat-header {
+    padding: 180px 0 85px;
+    color: #f9fafe;
+}
+
+.own-boat-header h2 {
+    font: 72px "RalewayBold", sans-serif;
+    padding-bottom: 30px;
+}
+
+.own-boat-header p {
+    font: 30px "OpenRegular", sans-serif;
+    text-transform: uppercase;
+}
+
+.own-boat .money-btn {
+    display: inline-block;
+    font: 14px "RalewayBold", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #bdbdbd;
+    line-height: 60px;
+    padding: 0 50px;
+    border-radius: 5px;
+    margin-bottom: 160px;
+    transition: .3s linear;
+}
+
+.own-boat .money-btn:hover {
+    background: #e7434e;
+    border: 1px solid transparent;
+}
+
+/*----------------------------Featured-boats Section----------------*/
+/*------------------------------------------------------------------*/
+
+.featured-boats .featured-header {
+    padding: 100px 0 95px;
+}
+
+.featured-header h3 {
+    font: 30px "RalewayRegular", sans-serif;
+    color: #343435;
+    padding-bottom: 30px;
+}
+
+.featured-header p {
+    color: #a8a8a8;
+}
+
+.rent-boat-list {
+    padding-bottom: 100px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.rent-boat-list li {
+    float: left;
+    position: relative;
+    width: calc(100% / 2);
+    padding: 0 15px 30px;
+}
+
+.rent-boat-list img {
+    width: 100%;
+    display: block;
+    height: 340px;
+}
+
+.rent-cell {
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    text-align: left;
+}
+
+.rent-boat-list .rent-cell p:nth-child(odd) {
+    font-size: 30px;
+    color: #e4e8e8;
+    padding-bottom: 20px;
+    transition: 0.25s linear;
+}
+
+.rent-boat-list li:hover p:nth-child(odd) {
+    font-size: 30px;
+    color: #ffff00;
+    padding-bottom: 20px;
+}
+
+.rent-boat-list .rent-cell p:nth-child(even) {
+    font: 16px "OpenRegular", sans-serif;
+    color: #e4e8e8;
+    padding-left: 30px;
+}
+
+/*----Icon-Spin--------------*/
+
+.hvr-icon-spin {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    padding-right: 2.2em;
+}
+
+.hvr-icon-spin:before {
+    content: "";
+    position: absolute;
+    background: url("../images/marker.png") center no-repeat;
+    width: 15px;
+    height: 15px;
+    left: 0.5em;
+    padding: 0 1px;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.rent-boat-list li:hover .hvr-icon-spin:before {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    color: #e7434e;
+}
+
+/*------Icon-Spin END-----------*/
+
+.rent-boat-list .rent-cell .seats {
+    background: url("../images/account.png") left center no-repeat;
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.featured-boats .rent-boat-list .price {
+    display: inline-block;
+    position: absolute;
+    left: 45px;
+    top: 30px;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+    background: #e7434e;
+}
+
+.featured-boats .more-boats-btn {
+    display: inline-block;
+    font: 14px "RalewayBold", sans-serif;
+    color: #6e6e6e;
+    text-decoration: none;
+    border: 1px solid #bdbdbd;
+    line-height: 60px;
+    padding: 0 40px;
+    border-radius: 5px;
+    margin-bottom: 85px;
+    transition: .3s linear;
+}
+
+.featured-boats .more-boats-btn:hover {
+    background: #e7434e;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+/*----------Wobble-vertical------------*/
+
+@-webkit-keyframes hvr-wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes hvr-wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px);
+    }
+    33.3% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    49.95% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    66.6% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+    83.25% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.hvr-wobble-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+.hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*------wobble-vertical END--------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+footer {
+    height: 15%;
+    background: #404040;
+    padding-bottom: 70px;
+    /*background-size:cover;*/
+}
+
+footer:before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: url("../images/border-bg.png") 0 top no-repeat;
+}
+
+.footer-table-list .ft-table-cell h4 {
+    font: 14px "RalewayBold", sans-serif;
+    color: #ececec;
+    padding-bottom: 20px;
+}
+
+.footer-table-list .ft-table-cell p {
+    font: 14px "OpenRegular", sans-serif;
+    color: #ececec;
+    line-height: 34px;
+}
+
+.footer-table-list {
+    display: table;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.footer-table-list > li {
+    display: table-cell;
+    width: calc(100% / 4);
+    vertical-align: top;
+    padding-right: 80px;
+}
+
+.footer-table-list .footer-form {
+    width: 470px;
+    display: block;
+}
+
+.footer-table-list .ft-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.footer-table-list .ft-table .ft-table-cell {
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+
+.footer-form input[type="email"] {
+    font: 14px "OpenRegular", sans-serif;
+    min-width: 260px;
+    line-height: 40px;
+    padding-left: 25px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: #c5c5c5;
+    float: left;
+}
+
+.footer-form .subscribe-btn {
+    font: 14px "OpenRegular", sans-serif;
+    line-height: 40px;
+    padding: 0 22px;
+    background: #e7434e;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    margin-bottom: 35px;
+    opacity: .9;
+    transition: .35s linear;
+}
+
+.footer-form .subscribe-btn:hover {
+    opacity: 1;
+}
+
+.footer-form .social-list {
+    overflow: hidden;
+}
+
+.footer-form .social-list li {
+    float: left;
+}
+
+.social-list li a {
+    text-decoration: none;
+    text-indent: -9999px;
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+}
+
+.footer-form .social-list .facebook {
+    background: url("../images/sprite.png") 0 50% no-repeat;
+}
+
+.footer-form .social-list .twitter {
+    background: url("../images/sprite.png") 50% 50% no-repeat;
+    margin-left: 20px;
+}
+
+.footer-form .social-list .google {
+    background: url("../images/sprite.png") 100% 50% no-repeat;
+    margin-left: 20px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------OTHER----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
